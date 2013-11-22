@@ -252,7 +252,7 @@ static Notifier MessageNotifier;
         hmd->Release();
         hmd = nullptr;
     }
-    printf("dealloc: %p\n", self);
+    
     [super dealloc];
 }
 
