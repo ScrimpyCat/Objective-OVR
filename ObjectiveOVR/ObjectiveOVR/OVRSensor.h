@@ -67,7 +67,6 @@ extern const OVRCoordinateFrame OVRCoordHMD;
 @property (readonly) GLKVector3 calibratedMagnetometer;
 //Configuration
 @property _Bool useMotionTracking;
-//@property float yawMultiplier; Removed in 0.2.5
 //Prediction Control
 @property float predictionDelta;
 @property _Bool usePrediction;
@@ -76,12 +75,9 @@ extern const OVRCoordinateFrame OVRCoordHMD;
 @property float accelerometerGain;
 //Magnetometer and Yaw Drift Correction Control
 @property _Bool useYawCorrection;
-//@property (readonly) _Bool isYawCorrectionInProgress; Removed in 0.2.5
 @property GLKMatrix4 magnetometerCalibration;
 @property (readonly) time_t magnetometerCalibrationTime;
 @property (readonly) _Bool hasMagnetometerCalibration;
-//@property (readonly) float magnetometerReferenceYaw; Removed in 0.2.5
-//@property (readonly) float yawErrorAngle; Removed in 0.2.5
 //Euler Angles
 @property (readonly) float yaw;
 @property (readonly) float pitch;
@@ -95,7 +91,6 @@ extern const OVRCoordinateFrame OVRCoordHMD;
 -(_Bool) loadMagnetometerCalibrationWithName: (NSString*)name;
 -(void) clearMagnetometerCalibration;
 -(void) clearMagnetometerReferences;
-//-(void) setMagnetometerReferenceDistance: (float)distance; Removed in 0.2.5
 -(GLKVector3) calibratedMagnetometerValue: (GLKVector3)rawMag;
 //Euler Angles
 -(void) getYaw: (float*)yaw Pitch: (float*)pitch Roll: (float*)roll; //alternative to individual

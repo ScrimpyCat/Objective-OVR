@@ -78,13 +78,11 @@ const OVRCoordinateFrame OVRCoordHMD = SensorDevice::Coord_HMD;
     
     NSString *BoolString[2] = { @"No", @"Yes" };
     [Description appendFormat: @"\n\t\tUse Motion Tracking: %@", BoolString[self.useMotionTracking]];
-    //[Description appendFormat: @"\n\t\tYaw Multiplier: %@", @(self.yawMultiplier)]; Removed in 0.2.5
     [Description appendFormat: @"\n\t\tUse Prediction: %@", BoolString[self.usePrediction]];
     [Description appendFormat: @"\n\t\tPrediction Delta: %@", @(self.predictionDelta)];
     [Description appendFormat: @"\n\t\tUse Gravity: %@", BoolString[self.useGravity]];
     [Description appendFormat: @"\n\t\tAccelerometer Gain: %@", @(self.accelerometerGain)];
     [Description appendFormat: @"\n\t\tUse Yaw Correction: %@", BoolString[self.useYawCorrection]];
-    //[Description appendFormat: @"\n\t\tYaw Correction In Progress: %@", BoolString[self.isYawCorrectionInProgress]]; Removed in 0.2.5
     [Description appendFormat: @"\n\t\tMagnetometer Calibration: %@", NSStringFromGLKMatrix4(self.magnetometerCalibration)];
     [Description appendFormat: @"\n\t\tMagnetometer Calibration Time: %@", [NSDate dateWithTimeIntervalSince1970: self.magnetometerCalibrationTime]];
     [Description appendFormat: @"\n\t\tHas Magnetometer Calibration: %@", BoolString[self.hasMagnetometerCalibration]];
@@ -298,18 +296,6 @@ const OVRCoordinateFrame OVRCoordHMD = SensorDevice::Coord_HMD;
     sensorFusion.EnableMotionTracking(useMotionTracking);
 }
 
-/* Removed in 0.2.5
--(float) yawMultiplier
-{
-    return sensorFusion.GetYawMultiplier();
-}
-
--(void) setYawMultiplier: (float)yawMultiplier
-{
-    sensorFusion.SetYawMultiplier(yawMultiplier);
-}
- */
-
 #pragma mark Prediction Control
 -(float) predictionDelta
 {
@@ -363,13 +349,6 @@ const OVRCoordinateFrame OVRCoordHMD = SensorDevice::Coord_HMD;
     sensorFusion.SetYawCorrectionEnabled(useYawCorrection);
 }
 
-/* Removed in 0.2.5
--(bool) isYawCorrectionInProgress
-{
-    return sensorFusion.IsYawCorrectionInProgress();
-}
- */
-
 -(GLKMatrix4) magnetometerCalibration
 {
     const Matrix4f MagCalMat = sensorFusion.GetMagCalibration();
@@ -395,18 +374,6 @@ const OVRCoordinateFrame OVRCoordHMD = SensorDevice::Coord_HMD;
     return sensorFusion.HasMagCalibration();
 }
 
-/* Removed in 0.2.5
--(float) magnetometerReferenceYaw
-{
-    return sensorFusion.GetMagRefYaw();
-}
-
--(float) yawErrorAngle
-{
-    return sensorFusion.GetYawErrorAngle();
-}
- */
-
 -(_Bool) saveMagnetometerCalibrationWithName: (NSString*)name
 {
     return sensorFusion.SaveMagCalibration([name UTF8String]);
@@ -426,13 +393,6 @@ const OVRCoordinateFrame OVRCoordHMD = SensorDevice::Coord_HMD;
 {
     sensorFusion.ClearMagReferences();
 }
-
-/* Removed in 0.2.5
--(void) setMagnetometerReferenceDistance: (float)distance
-{
-    sensorFusion.SetMagRefDistance(distance);
-}
- */
 
 -(GLKVector3) calibratedMagnetometerValue: (GLKVector3)rawMag
 {
