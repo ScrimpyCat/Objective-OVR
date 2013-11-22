@@ -1,0 +1,559 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		F3658B92183E6F0B00CCE8B5 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F3658B91183E6F0B00CCE8B5 /* Cocoa.framework */; };
+		F3658B9C183E6F0B00CCE8B5 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = F3658B9A183E6F0B00CCE8B5 /* InfoPlist.strings */; };
+		F3658BA7183E6F0B00CCE8B5 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F3658BA6183E6F0B00CCE8B5 /* XCTest.framework */; };
+		F3658BA8183E6F0B00CCE8B5 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F3658B91183E6F0B00CCE8B5 /* Cocoa.framework */; };
+		F3658BAB183E6F0B00CCE8B5 /* ObjectiveOVR.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F3658B8E183E6F0B00CCE8B5 /* ObjectiveOVR.framework */; };
+		F3658BB1183E6F0B00CCE8B5 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = F3658BAF183E6F0B00CCE8B5 /* InfoPlist.strings */; };
+		F3658BBC183E6F2000CCE8B5 /* ObjectiveOVR.h in Headers */ = {isa = PBXBuildFile; fileRef = F3658B9E183E6F0B00CCE8B5 /* ObjectiveOVR.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F3658BBE183E6F3E00CCE8B5 /* LibOVR in Resources */ = {isa = PBXBuildFile; fileRef = F3658BBD183E6F3E00CCE8B5 /* LibOVR */; };
+		F3658BCE183E6F6A00CCE8B5 /* OVRProfile_Private.h in Headers */ = {isa = PBXBuildFile; fileRef = F3658BBF183E6F6A00CCE8B5 /* OVRProfile_Private.h */; };
+		F3658BCF183E6F6A00CCE8B5 /* OVRProfile.h in Headers */ = {isa = PBXBuildFile; fileRef = F3658BC0183E6F6A00CCE8B5 /* OVRProfile.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F3658BD0183E6F6A00CCE8B5 /* OVRProfile.mm in Sources */ = {isa = PBXBuildFile; fileRef = F3658BC1183E6F6A00CCE8B5 /* OVRProfile.mm */; };
+		F3658BD1183E6F6A00CCE8B5 /* OVRProfileRiftDK1.h in Headers */ = {isa = PBXBuildFile; fileRef = F3658BC2183E6F6A00CCE8B5 /* OVRProfileRiftDK1.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F3658BD2183E6F6A00CCE8B5 /* OVRProfileRiftDK1.mm in Sources */ = {isa = PBXBuildFile; fileRef = F3658BC3183E6F6A00CCE8B5 /* OVRProfileRiftDK1.mm */; };
+		F3658BD3183E6F6A00CCE8B5 /* OVRProfileRiftDKHD.h in Headers */ = {isa = PBXBuildFile; fileRef = F3658BC4183E6F6A00CCE8B5 /* OVRProfileRiftDKHD.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F3658BD4183E6F6A00CCE8B5 /* OVRProfileRiftDKHD.mm in Sources */ = {isa = PBXBuildFile; fileRef = F3658BC5183E6F6A00CCE8B5 /* OVRProfileRiftDKHD.mm */; };
+		F3658BD5183E6F6A00CCE8B5 /* OVRGenericDevice_Private.h in Headers */ = {isa = PBXBuildFile; fileRef = F3658BC6183E6F6A00CCE8B5 /* OVRGenericDevice_Private.h */; };
+		F3658BD6183E6F6A00CCE8B5 /* OVRGenericDevice.h in Headers */ = {isa = PBXBuildFile; fileRef = F3658BC7183E6F6A00CCE8B5 /* OVRGenericDevice.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F3658BD7183E6F6A00CCE8B5 /* OVRGenericDevice.mm in Sources */ = {isa = PBXBuildFile; fileRef = F3658BC8183E6F6A00CCE8B5 /* OVRGenericDevice.mm */; };
+		F3658BD8183E6F6A00CCE8B5 /* OVRDevice.h in Headers */ = {isa = PBXBuildFile; fileRef = F3658BC9183E6F6A00CCE8B5 /* OVRDevice.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F3658BD9183E6F6A00CCE8B5 /* OVRDevice.mm in Sources */ = {isa = PBXBuildFile; fileRef = F3658BCA183E6F6A00CCE8B5 /* OVRDevice.mm */; };
+		F3658BDA183E6F6A00CCE8B5 /* OVRSensor_Private.h in Headers */ = {isa = PBXBuildFile; fileRef = F3658BCB183E6F6A00CCE8B5 /* OVRSensor_Private.h */; };
+		F3658BDB183E6F6A00CCE8B5 /* OVRSensor.h in Headers */ = {isa = PBXBuildFile; fileRef = F3658BCC183E6F6A00CCE8B5 /* OVRSensor.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F3658BDC183E6F6A00CCE8B5 /* OVRSensor.mm in Sources */ = {isa = PBXBuildFile; fileRef = F3658BCD183E6F6A00CCE8B5 /* OVRSensor.mm */; };
+		F3658BE1183E70FD00CCE8B5 /* libovr.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F3658BE0183E70FD00CCE8B5 /* libovr.a */; };
+		F3658BE3183E71D400CCE8B5 /* IOKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F3658BE2183E71D400CCE8B5 /* IOKit.framework */; };
+		F3658BE5183E71DF00CCE8B5 /* GLKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F3658BE4183E71DF00CCE8B5 /* GLKit.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		F3658BA9183E6F0B00CCE8B5 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F3658B85183E6F0B00CCE8B5 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F3658B8D183E6F0B00CCE8B5;
+			remoteInfo = ObjectiveOVR;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		F3658B8E183E6F0B00CCE8B5 /* ObjectiveOVR.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ObjectiveOVR.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F3658B91183E6F0B00CCE8B5 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
+		F3658B94183E6F0B00CCE8B5 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		F3658B95183E6F0B00CCE8B5 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		F3658B96183E6F0B00CCE8B5 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
+		F3658B99183E6F0B00CCE8B5 /* ObjectiveOVR-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "ObjectiveOVR-Info.plist"; sourceTree = "<group>"; };
+		F3658B9B183E6F0B00CCE8B5 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		F3658B9D183E6F0B00CCE8B5 /* ObjectiveOVR-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ObjectiveOVR-Prefix.pch"; sourceTree = "<group>"; };
+		F3658B9E183E6F0B00CCE8B5 /* ObjectiveOVR.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ObjectiveOVR.h; sourceTree = "<group>"; };
+		F3658BA5183E6F0B00CCE8B5 /* ObjectiveOVRTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ObjectiveOVRTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		F3658BA6183E6F0B00CCE8B5 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		F3658BAE183E6F0B00CCE8B5 /* ObjectiveOVRTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "ObjectiveOVRTests-Info.plist"; sourceTree = "<group>"; };
+		F3658BB0183E6F0B00CCE8B5 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		F3658BBD183E6F3E00CCE8B5 /* LibOVR */ = {isa = PBXFileReference; lastKnownFileType = folder; name = LibOVR; path = ObjectiveOVR/LibOVR; sourceTree = "<group>"; };
+		F3658BBF183E6F6A00CCE8B5 /* OVRProfile_Private.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OVRProfile_Private.h; sourceTree = "<group>"; };
+		F3658BC0183E6F6A00CCE8B5 /* OVRProfile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OVRProfile.h; sourceTree = "<group>"; };
+		F3658BC1183E6F6A00CCE8B5 /* OVRProfile.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = OVRProfile.mm; sourceTree = "<group>"; };
+		F3658BC2183E6F6A00CCE8B5 /* OVRProfileRiftDK1.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OVRProfileRiftDK1.h; sourceTree = "<group>"; };
+		F3658BC3183E6F6A00CCE8B5 /* OVRProfileRiftDK1.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = OVRProfileRiftDK1.mm; sourceTree = "<group>"; };
+		F3658BC4183E6F6A00CCE8B5 /* OVRProfileRiftDKHD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OVRProfileRiftDKHD.h; sourceTree = "<group>"; };
+		F3658BC5183E6F6A00CCE8B5 /* OVRProfileRiftDKHD.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = OVRProfileRiftDKHD.mm; sourceTree = "<group>"; };
+		F3658BC6183E6F6A00CCE8B5 /* OVRGenericDevice_Private.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OVRGenericDevice_Private.h; sourceTree = "<group>"; };
+		F3658BC7183E6F6A00CCE8B5 /* OVRGenericDevice.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OVRGenericDevice.h; sourceTree = "<group>"; };
+		F3658BC8183E6F6A00CCE8B5 /* OVRGenericDevice.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = OVRGenericDevice.mm; sourceTree = "<group>"; };
+		F3658BC9183E6F6A00CCE8B5 /* OVRDevice.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OVRDevice.h; sourceTree = "<group>"; };
+		F3658BCA183E6F6A00CCE8B5 /* OVRDevice.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = OVRDevice.mm; sourceTree = "<group>"; };
+		F3658BCB183E6F6A00CCE8B5 /* OVRSensor_Private.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OVRSensor_Private.h; sourceTree = "<group>"; };
+		F3658BCC183E6F6A00CCE8B5 /* OVRSensor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OVRSensor.h; sourceTree = "<group>"; };
+		F3658BCD183E6F6A00CCE8B5 /* OVRSensor.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = OVRSensor.mm; sourceTree = "<group>"; };
+		F3658BDE183E70A100CCE8B5 /* libovr.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libovr.a; path = ObjectiveOVR/LibOVR/Lib/MacOS/Debug/libovr.a; sourceTree = "<group>"; };
+		F3658BE0183E70FD00CCE8B5 /* libovr.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libovr.a; path = ObjectiveOVR/LibOVR/Lib/MacOS/Release/libovr.a; sourceTree = "<group>"; };
+		F3658BE2183E71D400CCE8B5 /* IOKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = IOKit.framework; path = System/Library/Frameworks/IOKit.framework; sourceTree = SDKROOT; };
+		F3658BE4183E71DF00CCE8B5 /* GLKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GLKit.framework; path = System/Library/Frameworks/GLKit.framework; sourceTree = SDKROOT; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		F3658B8A183E6F0B00CCE8B5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F3658BE5183E71DF00CCE8B5 /* GLKit.framework in Frameworks */,
+				F3658BE3183E71D400CCE8B5 /* IOKit.framework in Frameworks */,
+				F3658BE1183E70FD00CCE8B5 /* libovr.a in Frameworks */,
+				F3658B92183E6F0B00CCE8B5 /* Cocoa.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F3658BA2183E6F0B00CCE8B5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F3658BA8183E6F0B00CCE8B5 /* Cocoa.framework in Frameworks */,
+				F3658BA7183E6F0B00CCE8B5 /* XCTest.framework in Frameworks */,
+				F3658BAB183E6F0B00CCE8B5 /* ObjectiveOVR.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		F3658B84183E6F0B00CCE8B5 = {
+			isa = PBXGroup;
+			children = (
+				F3658BBD183E6F3E00CCE8B5 /* LibOVR */,
+				F3658B97183E6F0B00CCE8B5 /* ObjectiveOVR */,
+				F3658BAC183E6F0B00CCE8B5 /* ObjectiveOVRTests */,
+				F3658B90183E6F0B00CCE8B5 /* Frameworks */,
+				F3658B8F183E6F0B00CCE8B5 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		F3658B8F183E6F0B00CCE8B5 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				F3658B8E183E6F0B00CCE8B5 /* ObjectiveOVR.framework */,
+				F3658BA5183E6F0B00CCE8B5 /* ObjectiveOVRTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		F3658B90183E6F0B00CCE8B5 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				F3658BE4183E71DF00CCE8B5 /* GLKit.framework */,
+				F3658BE2183E71D400CCE8B5 /* IOKit.framework */,
+				F3658BE0183E70FD00CCE8B5 /* libovr.a */,
+				F3658BDE183E70A100CCE8B5 /* libovr.a */,
+				F3658B91183E6F0B00CCE8B5 /* Cocoa.framework */,
+				F3658BA6183E6F0B00CCE8B5 /* XCTest.framework */,
+				F3658B93183E6F0B00CCE8B5 /* Other Frameworks */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		F3658B93183E6F0B00CCE8B5 /* Other Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				F3658B94183E6F0B00CCE8B5 /* Foundation.framework */,
+				F3658B95183E6F0B00CCE8B5 /* CoreData.framework */,
+				F3658B96183E6F0B00CCE8B5 /* AppKit.framework */,
+			);
+			name = "Other Frameworks";
+			sourceTree = "<group>";
+		};
+		F3658B97183E6F0B00CCE8B5 /* ObjectiveOVR */ = {
+			isa = PBXGroup;
+			children = (
+				F3658B9E183E6F0B00CCE8B5 /* ObjectiveOVR.h */,
+				F3658BDD183E6F7100CCE8B5 /* Profile */,
+				F3658BC6183E6F6A00CCE8B5 /* OVRGenericDevice_Private.h */,
+				F3658BC7183E6F6A00CCE8B5 /* OVRGenericDevice.h */,
+				F3658BC8183E6F6A00CCE8B5 /* OVRGenericDevice.mm */,
+				F3658BC9183E6F6A00CCE8B5 /* OVRDevice.h */,
+				F3658BCA183E6F6A00CCE8B5 /* OVRDevice.mm */,
+				F3658BCB183E6F6A00CCE8B5 /* OVRSensor_Private.h */,
+				F3658BCC183E6F6A00CCE8B5 /* OVRSensor.h */,
+				F3658BCD183E6F6A00CCE8B5 /* OVRSensor.mm */,
+				F3658B98183E6F0B00CCE8B5 /* Supporting Files */,
+			);
+			path = ObjectiveOVR;
+			sourceTree = "<group>";
+		};
+		F3658B98183E6F0B00CCE8B5 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				F3658B99183E6F0B00CCE8B5 /* ObjectiveOVR-Info.plist */,
+				F3658B9A183E6F0B00CCE8B5 /* InfoPlist.strings */,
+				F3658B9D183E6F0B00CCE8B5 /* ObjectiveOVR-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		F3658BAC183E6F0B00CCE8B5 /* ObjectiveOVRTests */ = {
+			isa = PBXGroup;
+			children = (
+				F3658BAD183E6F0B00CCE8B5 /* Supporting Files */,
+			);
+			path = ObjectiveOVRTests;
+			sourceTree = "<group>";
+		};
+		F3658BAD183E6F0B00CCE8B5 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				F3658BAE183E6F0B00CCE8B5 /* ObjectiveOVRTests-Info.plist */,
+				F3658BAF183E6F0B00CCE8B5 /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		F3658BDD183E6F7100CCE8B5 /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				F3658BBF183E6F6A00CCE8B5 /* OVRProfile_Private.h */,
+				F3658BC0183E6F6A00CCE8B5 /* OVRProfile.h */,
+				F3658BC1183E6F6A00CCE8B5 /* OVRProfile.mm */,
+				F3658BC2183E6F6A00CCE8B5 /* OVRProfileRiftDK1.h */,
+				F3658BC3183E6F6A00CCE8B5 /* OVRProfileRiftDK1.mm */,
+				F3658BC4183E6F6A00CCE8B5 /* OVRProfileRiftDKHD.h */,
+				F3658BC5183E6F6A00CCE8B5 /* OVRProfileRiftDKHD.mm */,
+			);
+			name = Profile;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		F3658B8B183E6F0B00CCE8B5 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F3658BD8183E6F6A00CCE8B5 /* OVRDevice.h in Headers */,
+				F3658BCE183E6F6A00CCE8B5 /* OVRProfile_Private.h in Headers */,
+				F3658BCF183E6F6A00CCE8B5 /* OVRProfile.h in Headers */,
+				F3658BD1183E6F6A00CCE8B5 /* OVRProfileRiftDK1.h in Headers */,
+				F3658BDB183E6F6A00CCE8B5 /* OVRSensor.h in Headers */,
+				F3658BD3183E6F6A00CCE8B5 /* OVRProfileRiftDKHD.h in Headers */,
+				F3658BD6183E6F6A00CCE8B5 /* OVRGenericDevice.h in Headers */,
+				F3658BDA183E6F6A00CCE8B5 /* OVRSensor_Private.h in Headers */,
+				F3658BD5183E6F6A00CCE8B5 /* OVRGenericDevice_Private.h in Headers */,
+				F3658BBC183E6F2000CCE8B5 /* ObjectiveOVR.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		F3658B8D183E6F0B00CCE8B5 /* ObjectiveOVR */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F3658BB6183E6F0B00CCE8B5 /* Build configuration list for PBXNativeTarget "ObjectiveOVR" */;
+			buildPhases = (
+				F3658B89183E6F0B00CCE8B5 /* Sources */,
+				F3658B8A183E6F0B00CCE8B5 /* Frameworks */,
+				F3658B8B183E6F0B00CCE8B5 /* Headers */,
+				F3658B8C183E6F0B00CCE8B5 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ObjectiveOVR;
+			productName = ObjectiveOVR;
+			productReference = F3658B8E183E6F0B00CCE8B5 /* ObjectiveOVR.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		F3658BA4183E6F0B00CCE8B5 /* ObjectiveOVRTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F3658BB9183E6F0B00CCE8B5 /* Build configuration list for PBXNativeTarget "ObjectiveOVRTests" */;
+			buildPhases = (
+				F3658BA1183E6F0B00CCE8B5 /* Sources */,
+				F3658BA2183E6F0B00CCE8B5 /* Frameworks */,
+				F3658BA3183E6F0B00CCE8B5 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				F3658BAA183E6F0B00CCE8B5 /* PBXTargetDependency */,
+			);
+			name = ObjectiveOVRTests;
+			productName = ObjectiveOVRTests;
+			productReference = F3658BA5183E6F0B00CCE8B5 /* ObjectiveOVRTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		F3658B85183E6F0B00CCE8B5 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0500;
+				ORGANIZATIONNAME = "Stefan Johnson";
+				TargetAttributes = {
+					F3658BA4183E6F0B00CCE8B5 = {
+						TestTargetID = F3658B8D183E6F0B00CCE8B5;
+					};
+				};
+			};
+			buildConfigurationList = F3658B88183E6F0B00CCE8B5 /* Build configuration list for PBXProject "ObjectiveOVR" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = F3658B84183E6F0B00CCE8B5;
+			productRefGroup = F3658B8F183E6F0B00CCE8B5 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				F3658B8D183E6F0B00CCE8B5 /* ObjectiveOVR */,
+				F3658BA4183E6F0B00CCE8B5 /* ObjectiveOVRTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		F3658B8C183E6F0B00CCE8B5 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F3658BBE183E6F3E00CCE8B5 /* LibOVR in Resources */,
+				F3658B9C183E6F0B00CCE8B5 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F3658BA3183E6F0B00CCE8B5 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F3658BB1183E6F0B00CCE8B5 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		F3658B89183E6F0B00CCE8B5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F3658BD0183E6F6A00CCE8B5 /* OVRProfile.mm in Sources */,
+				F3658BDC183E6F6A00CCE8B5 /* OVRSensor.mm in Sources */,
+				F3658BD2183E6F6A00CCE8B5 /* OVRProfileRiftDK1.mm in Sources */,
+				F3658BD4183E6F6A00CCE8B5 /* OVRProfileRiftDKHD.mm in Sources */,
+				F3658BD9183E6F6A00CCE8B5 /* OVRDevice.mm in Sources */,
+				F3658BD7183E6F6A00CCE8B5 /* OVRGenericDevice.mm in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F3658BA1183E6F0B00CCE8B5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		F3658BAA183E6F0B00CCE8B5 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F3658B8D183E6F0B00CCE8B5 /* ObjectiveOVR */;
+			targetProxy = F3658BA9183E6F0B00CCE8B5 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		F3658B9A183E6F0B00CCE8B5 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F3658B9B183E6F0B00CCE8B5 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		F3658BAF183E6F0B00CCE8B5 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F3658BB0183E6F0B00CCE8B5 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		F3658BB4183E6F0B00CCE8B5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		F3658BB5183E6F0B00CCE8B5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		F3658BB7183E6F0B00CCE8B5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_ARC = NO;
+				COMBINE_HIDPI_IMAGES = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				FRAMEWORK_VERSION = A;
+				GCC_ENABLE_CPP_RTTI = NO;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "ObjectiveOVR/ObjectiveOVR-Prefix.pch";
+				INFOPLIST_FILE = "ObjectiveOVR/ObjectiveOVR-Info.plist";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					/Users/stefanjohnson/Documents/Projects/Misc/ObjectiveOVR/ObjectiveOVR/LibOVR/Lib/MacOS/Debug,
+					/Users/stefanjohnson/Documents/Projects/Misc/ObjectiveOVR/ObjectiveOVR/LibOVR/Lib/MacOS/Release,
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = framework;
+			};
+			name = Debug;
+		};
+		F3658BB8183E6F0B00CCE8B5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_ARC = NO;
+				COMBINE_HIDPI_IMAGES = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				FRAMEWORK_VERSION = A;
+				GCC_ENABLE_CPP_RTTI = NO;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "ObjectiveOVR/ObjectiveOVR-Prefix.pch";
+				INFOPLIST_FILE = "ObjectiveOVR/ObjectiveOVR-Info.plist";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					/Users/stefanjohnson/Documents/Projects/Misc/ObjectiveOVR/ObjectiveOVR/LibOVR/Lib/MacOS/Debug,
+					/Users/stefanjohnson/Documents/Projects/Misc/ObjectiveOVR/ObjectiveOVR/LibOVR/Lib/MacOS/Release,
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = framework;
+			};
+			name = Release;
+		};
+		F3658BBA183E6F0B00CCE8B5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/ObjectiveOVR.framework/Versions/A/ObjectiveOVR";
+				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+					"$(inherited)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "ObjectiveOVR/ObjectiveOVR-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "ObjectiveOVRTests/ObjectiveOVRTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		F3658BBB183E6F0B00CCE8B5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/ObjectiveOVR.framework/Versions/A/ObjectiveOVR";
+				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+					"$(inherited)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "ObjectiveOVR/ObjectiveOVR-Prefix.pch";
+				INFOPLIST_FILE = "ObjectiveOVRTests/ObjectiveOVRTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		F3658B88183E6F0B00CCE8B5 /* Build configuration list for PBXProject "ObjectiveOVR" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F3658BB4183E6F0B00CCE8B5 /* Debug */,
+				F3658BB5183E6F0B00CCE8B5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F3658BB6183E6F0B00CCE8B5 /* Build configuration list for PBXNativeTarget "ObjectiveOVR" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F3658BB7183E6F0B00CCE8B5 /* Debug */,
+				F3658BB8183E6F0B00CCE8B5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F3658BB9183E6F0B00CCE8B5 /* Build configuration list for PBXNativeTarget "ObjectiveOVRTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F3658BBA183E6F0B00CCE8B5 /* Debug */,
+				F3658BBB183E6F0B00CCE8B5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = F3658B85183E6F0B00CCE8B5 /* Project object */;
+}
