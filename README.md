@@ -8,6 +8,12 @@ As the Oculus Rift SDK is currently still in early stages of development (featur
 The current design for the framework is to associated all behaviour with the OVRDevice (an HMD device), as it assumes functionality is only available when an HMD device is available.
 
 
+Usage
+-----
+
+Download the realease build, or download the same version of the Oculus Rift SDK used but the framework and add the libovr.a to the project.
+
+
 
 TO-DO
 -----
