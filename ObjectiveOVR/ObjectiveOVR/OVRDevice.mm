@@ -152,7 +152,6 @@ static _Bool Initialized = NO;
     {
         static dispatch_once_t onceToken;
         dispatch_once(&onceToken, ^{
-            Initialized = YES;
             System::Init(Log::ConfigureDefaultLog(LogMask_All));
             
             Manager = *DeviceManager::Create();
@@ -168,6 +167,7 @@ static _Bool Initialized = NO;
             
             Manager->SetMessageHandler((MessageHandler*)&MessageNotifier);
             atexit(DestroySystem);
+            Initialized = YES;
         });
     }
 }
@@ -178,11 +178,11 @@ static _Bool Initialized = NO;
     {
         static dispatch_once_t onceToken;
         dispatch_once(&onceToken, ^{
-            Initialized = NO;
             [Devices release]; Devices = nil;
             
             Manager = nullptr;
             System::Destroy();
+            Initialized = NO;
         });
     }
 }
