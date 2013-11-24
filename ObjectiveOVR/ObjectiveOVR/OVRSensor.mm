@@ -50,7 +50,6 @@ const OVRCoordinateFrame OVRCoordHMD = SensorDevice::Coord_HMD;
     
     if ((self = [super init]))
     {
-        device->AddRef();
         sensor = device;
         sensorFusion.AttachToSensor(device);
         sensorFusion.SetPredictionEnabled();
@@ -101,11 +100,7 @@ const OVRCoordinateFrame OVRCoordHMD = SensorDevice::Coord_HMD;
 
 -(void) dealloc
 {
-    if (sensor != nullptr)
-    {
-        sensor->Release();
-        sensor = nullptr;
-    }
+    if (sensor != nullptr) sensor = nullptr;
     
     [super dealloc];
 }

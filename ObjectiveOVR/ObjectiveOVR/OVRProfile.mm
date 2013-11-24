@@ -77,7 +77,6 @@ const OVREyeCupType OVREyeCupC = EyeCup_C;
     
     if ((self = [super init]))
     {
-        prof->AddRef();
         profile = prof;
     }
     
@@ -115,11 +114,7 @@ const OVREyeCupType OVREyeCupC = EyeCup_C;
 
 -(void) dealloc
 {
-    if (profile != nullptr)
-    {
-        profile->Release();
-        profile = nullptr;
-    }
+    if (profile != nullptr) profile = nullptr;
     
     [super dealloc];
 }

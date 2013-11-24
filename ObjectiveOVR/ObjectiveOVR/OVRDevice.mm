@@ -24,6 +24,7 @@
  */
 
 #import "OVRDevice.h"
+#import <dispatch/dispatch.h>
 #import "LibOVR/Include/OVRVersion.h"
 #import "LibOVR/Include/OVR.h"
 #import "OVRGenericDevice_Private.h"
@@ -47,6 +48,7 @@ using namespace OVR;
 
 @property (readonly) Ptr<HMDDevice> hmd;
 
++(void) destroy;
 +(Ptr<DeviceManager>) deviceManager;
 +(instancetype) device: (Ptr<HMDDevice>)hmd;
 
@@ -137,23 +139,52 @@ public:
     }
 };
 
+static void DestroySystem(void)
+{
+    [OVRDevice destroy];
+}
+
 static Notifier MessageNotifier;
+static _Bool Initialized = NO;
 +(void) initialize
 {
-    System::Init(Log::ConfigureDefaultLog(LogMask_All));
-    
-    Manager = *DeviceManager::Create();
-    
-    DeviceEnumerator<HMDDevice> DeviceList = Manager->EnumerateDevices<HMDDevice>();
-    do
+    if (!Initialized)
     {
-        Ptr<HMDDevice> Device = DeviceList.CreateDevice();
-        [OVRDevice device: Device];
-        if (Device != nullptr) Device->Release();
-    } while (DeviceList.Next());
-    
-    
-    Manager->SetMessageHandler((MessageHandler*)&MessageNotifier);
+        static dispatch_once_t onceToken;
+        dispatch_once(&onceToken, ^{
+            Initialized = YES;
+            System::Init(Log::ConfigureDefaultLog(LogMask_All));
+            
+            Manager = *DeviceManager::Create();
+            
+            DeviceEnumerator<HMDDevice> DeviceList = Manager->EnumerateDevices<HMDDevice>();
+            do
+            {
+                Ptr<HMDDevice> Device = DeviceList.CreateDevice();
+                [OVRDevice device: Device];
+                if (Device != nullptr) Device->Release();
+            } while (DeviceList.Next());
+            
+            
+            Manager->SetMessageHandler((MessageHandler*)&MessageNotifier);
+            atexit(DestroySystem);
+        });
+    }
+}
+
++(void) destroy
+{
+    if (Initialized)
+    {
+        static dispatch_once_t onceToken;
+        dispatch_once(&onceToken, ^{
+            Initialized = NO;
+            [Devices release]; Devices = nil;
+            
+            Manager = nullptr;
+            System::Destroy();
+        });
+    }
 }
 
 +(NSNotificationCenter*) notificationCenter
@@ -181,7 +212,6 @@ static Notifier MessageNotifier;
     
     if ((self = [super init]))
     {
-        device->AddRef();
         hmd = device;
         
         Ptr<SensorDevice> Sensor = device->GetSensor();
@@ -190,9 +220,6 @@ static Notifier MessageNotifier;
             sensor = [[OVRSensor alloc] initWithSensorDevice: Sensor];
             Sensor->Release();
         }
-        
-        Ptr<Profile> Prof = device->GetProfile();
-        
     }
     
     return self;
@@ -225,7 +252,7 @@ static Notifier MessageNotifier;
 
 -(OVRProfile*) profile
 {
-    return [[OVRProfile alloc] initWithProfile: hmd->GetProfile()];
+    return [[[OVRProfile alloc] initWithProfile: hmd->GetProfile()] autorelease];
 }
 
 -(NSString*) profileName
@@ -247,11 +274,7 @@ static Notifier MessageNotifier;
 {
     [sensor release]; sensor = nil;
     
-    if (hmd != nullptr)
-    {
-        hmd->Release();
-        hmd = nullptr;
-    }
+    if (hmd != nullptr) hmd = nullptr;
     
     [super dealloc];
 }
