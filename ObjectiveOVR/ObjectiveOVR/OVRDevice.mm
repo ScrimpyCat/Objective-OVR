@@ -233,7 +233,7 @@ static _Bool Initialized = NO;
     
     [Description appendFormat: @"\n\tManufacturer: \"%@\"  Product: \"%@\"  Version: %u", self.manufacturer, self.productName, self.version];
     [Description appendFormat: @"\n\tDisplay Name: \"%@\"  ID: %u", self.displayDeviceName, self.displayID];
-    [Description appendFormat: @"\n\tResolution: %@  Screen Position: %@ Screen Size: %@", NSStringFromSize(self.resolution), NSStringFromPoint(self.screenPosition), NSStringFromSize(self.screenSize)];
+    [Description appendFormat: @"\n\tResolution: %@  Screen Position: %@  Screen Size: %@", NSStringFromSize(self.resolution), NSStringFromPoint(self.screenPosition), NSStringFromSize(self.screenSize)];
     [Description appendFormat: @"\n\tVertical Screen Center: %@", @(self.verticalScreenCenter)];
     [Description appendFormat: @"\n\tEye To Screen Distance: %@  Lens Separation Distance: %@  Interpupillary Distance: %@", @(self.eyeToScreenDistance), @(self.lensSeparationDistance), @(self.interpupillaryDistance)];
     [Description appendFormat: @"\n\tDistortion K: %@", NSStringFromGLKVector4(self.distortionK)];
