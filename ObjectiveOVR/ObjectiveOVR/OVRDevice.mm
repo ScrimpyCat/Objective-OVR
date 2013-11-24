@@ -238,6 +238,7 @@ static _Bool Initialized = NO;
     [Description appendFormat: @"\n\tEye To Screen Distance: %@  Lens Separation Distance: %@  Interpupillary Distance: %@", @(self.eyeToScreenDistance), @(self.lensSeparationDistance), @(self.interpupillaryDistance)];
     [Description appendFormat: @"\n\tDistortion K: %@", NSStringFromGLKVector4(self.distortionK)];
     [Description appendFormat: @"\n\tChromatic Aberration Correction: %@", NSStringFromGLKVector4(self.chromaAbCorrection)];
+    [Description appendFormat: @"\n\tProfile: %@", [[self.profile description] stringByReplacingOccurrencesOfString: @"\n" withString: @"\n\t"]];
     [Description appendFormat: @"\n\tSensor: %@", [[sensor description] stringByReplacingOccurrencesOfString: @"\n" withString: @"\n\t"]];
     
     [Description appendString: @"\n}"];
