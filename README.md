@@ -21,3 +21,4 @@ TO-DO
  * Set up notifications for different events triggered by the Oculus Rift.
  * Expose the rest of the profile functionality (saving, loading, creationg).
  * Allow callback for sensor data, with optional use of Sensor Fusion (currently only uses Sensor Fusion).
+ * Expose the latency tester device.
